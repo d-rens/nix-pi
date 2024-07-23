@@ -2,12 +2,15 @@
   config, 
   lib, 
   pkgs, 
+  inputs,
   ... 
 }:
 {
   imports = [
       ./hardware-configuration.nix
       ./services
+      ./virtualisation.nix
+      ./home.nix
   ];
 
   boot.loader.grub = {
@@ -25,17 +28,12 @@
   users = {
     defaultUserShell = pkgs.fish;
     users.pi = {
+      description = "pi";
       isNormalUser = true;
       extraGroups = [ 
         "wheel"
       ]; 
       initialPassword = "password";
-    };
-    users.root = {
-      extraGroups = [ 
-        "wheel"
-      ]; 
-      initialPassword = "root";
     };
   };
 
@@ -80,6 +78,5 @@
       channel = "https://nixos.rog/channels/nixos-unstable";
     };
   };
-
 }
 

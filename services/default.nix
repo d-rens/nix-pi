@@ -7,14 +7,10 @@
   imports = [
     ./nextcloud.nix
     ./freshrss.nix
+    #./immich.nix
   ];
 
   services = {
-    # probably only works on unstable
-    # immich = {
-    #   enable = true;
-    # };
-    
     avahi = {
       enable = true;
       nssmdns = true;
@@ -29,6 +25,5 @@
     resolved = {
       enable = true;
     };
-
   };
 }
