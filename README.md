@@ -46,6 +46,7 @@ following thread.
 
 https://github.com/nixos/nixpkgs/issues/260754#issuecomment-1908664693
 
-## hardware on the pi5 is a 1tb nvme m.2 mounted that is able to provide much
-more speed than the sd-card is able to, that is helpful when putting backups
+## hardware 
+on the pi5 is a 1tb nvme m.2 mounted that is able to provide much
+more speed/storage than the sd-card is able to, that is helpful when putting backups
 (with borg), immich and nextcloud on it, can recommend.
