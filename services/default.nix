@@ -5,6 +5,7 @@
 }:
 {
   imports = [
+    ./borg.nix
     ./nextcloud.nix
     ./freshrss.nix
     #./immich.nix
