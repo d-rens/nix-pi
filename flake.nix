@@ -13,9 +13,9 @@
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
       pi = nixpkgs.lib.nixosSystem {
-        system = "aarch64-linux";
+        system = "aarch64";
         modules = [
-          ./configuration.nix
+          ./hosts/pi/configuration.nix
           home-manager.nixosModules.home-manager
           {
 	    home-manager = {
@@ -24,7 +24,7 @@
               extraSpecialArgs = {
                 inherit inputs;
               };
-	      users.pi = import ./home.nix;
+	      users.pi = import ./home;
 	    };
           }
         ];

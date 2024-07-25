@@ -7,10 +7,9 @@
 }:
 {
   imports = [
+      ../../services
       ./hardware-configuration.nix
-      ./services
       ./virtualisation.nix
-      ./home.nix
   ];
 
   boot.loader.grub = {
